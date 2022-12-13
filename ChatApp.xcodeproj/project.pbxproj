@@ -16,6 +16,7 @@
 		18EC38BD29487EF400C556DC /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC38BC29487EF400C556DC /* MessageBubble.swift */; };
 		18EC38BF2948809E00C556DC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC38BE2948809E00C556DC /* Extension.swift */; };
 		18EC38C1294882E800C556DC /* MessageField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC38C0294882E800C556DC /* MessageField.swift */; };
+		18EC38C32948858200C556DC /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC38C22948858200C556DC /* ChatManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		18EC38BC29487EF400C556DC /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
 		18EC38BE2948809E00C556DC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		18EC38C0294882E800C556DC /* MessageField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageField.swift; sourceTree = "<group>"; };
+		18EC38C22948858200C556DC /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				18EC38B929487EB600C556DC /* ChatModel.swift */,
+				18EC38C22948858200C556DC /* ChatManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				18EC38BF2948809E00C556DC /* Extension.swift in Sources */,
 				18EC38B729487E7C00C556DC /* TitleRow.swift in Sources */,
 				18EC38BA29487EB600C556DC /* ChatModel.swift in Sources */,
+				18EC38C32948858200C556DC /* ChatManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

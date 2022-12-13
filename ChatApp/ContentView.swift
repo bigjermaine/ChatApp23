@@ -12,28 +12,32 @@ struct ContentView: View {
     var body: some View {
         VStack{
             TitleRow()
-            ScrollView {
-                ForEach(messagesArray, id: \.self) { text in
-                    MessageBubble(message: Message(id: "12345", text: text, received: true, timestamp: Date()))
+            ScrollViewReader { proxy in
+                ScrollView {
+                    ForEach(messagesManager.messages, id: \.id) { message in
+                        MessageBubble(message: message)
+                            .environmentObject(messagesManager)
+                    }
+                }
+                
+                .padding(.top, 10)
+                .background(.white)
+                .cornerRadius(30, corners: [.topLeft, .topRight])
+                MessageField()
+            .onChange(of: messagesManager.lastMessageId) { id in
+                withAnimation {
+                    proxy.scrollTo(id, anchor:.bottom)
                 }
             }
-            
-            .padding(.top, 10)
-            .background(.white)
-            .cornerRadius(30, corners: [.topLeft, .topRight])
-            MessageField()
-                
-
+                .padding(.top, 10)
+                .background(.blue.opacity(0.5       ))
+            }
         }
-        
-        .padding(.top, 10)
-        .background(.blue.opacity(0.5       ))
     }
+    
 }
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
-}
